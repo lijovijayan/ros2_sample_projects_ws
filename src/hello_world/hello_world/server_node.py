@@ -10,7 +10,8 @@ class Server(Node):
         
         self.get_logger().info("Initializing 'hello_world_server' node")
         self._publisher = self.create_publisher(HelloWorld, 'sample_topic', 10)
-        self.get_logger().info("Initialized 'hello_world_server' node with topic 'sample_topic'")
+        self.get_logger().info("Initialized 'hello_world_server'")
+        self.get_logger().info("Topic: 'sample_topic'")
         
         self.create_timer(1, self.publish_topic)
 

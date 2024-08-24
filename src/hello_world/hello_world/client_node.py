@@ -7,7 +7,8 @@ class Client(Node):
         super().__init__('client')
         self.get_logger().info("Initialing the client node")
         self.create_subscription(HelloWorld, 'sample_topic', self.message_callback, 10)
-        self.get_logger().info("Initialized the client node")
+        self.get_logger().info("Initialized client node")
+        self.get_logger().info("Topic: 'sample_topic'")
         
     def message_callback(self, msg: HelloWorld):
         self.get_logger().info(f"Received message from server: {msg.message}")
