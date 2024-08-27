@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lifecycle_example" exec="lifecycle_example" />
+    <node pkg="lifecycle_example" exec="lifecycle_manager" />
+</launch>
